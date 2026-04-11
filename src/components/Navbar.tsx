@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import Link from "next/link";
+import Image from "next/image";
 import { usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
@@ -38,14 +39,15 @@ export default function Navbar() {
         >
             <div className="max-w-7xl mx-auto flex items-center justify-between">
                 {/* Logo */}
-                <Link href="/" className="flex items-center gap-2">
-                    <div className="w-9 h-9 bg-[#2e2a7a] text-white flex items-center justify-center font-bold text-xl rounded-lg">
-                        H
-                    </div>
-                    <div className="flex flex-col leading-tight">
-                        <span className="font-bold text-[#0b0d17] text-lg">HudHud</span>
-                        <span className="text-[#0b0d17] text-xs font-bold uppercase tracking-wider -mt-1">Cloud</span>
-                    </div>
+                <Link href="/" className="flex items-center">
+                    <Image
+                        src="/cloudLogo.png"
+                        alt="HudHud Cloud"
+                        width={140}
+                        height={48}
+                        className="object-contain h-12 w-auto"
+                        priority
+                    />
                 </Link>
 
                 {/* Desktop Nav */}

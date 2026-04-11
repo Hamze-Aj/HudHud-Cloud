@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import { Facebook, Twitter, Linkedin, Instagram, Mail, Phone, MapPin } from "lucide-react";
 
 export default function Footer() {
@@ -9,11 +10,14 @@ export default function Footer() {
             <div className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16 lg:gap-8 mb-20">
                 {/* Logo Column */}
                 <div className="flex flex-col gap-8">
-                    <Link href="/" className="flex items-center gap-3">
-                        <div className="w-10 h-10 bg-orange-gradient text-white flex items-center justify-center font-bold text-2xl rounded-xl shadow-lg shadow-brand-orange/20">
-                            H
-                        </div>
-                        <span className="font-bold text-white text-xl tracking-tight">HudHud Cloud</span>
+                    <Link href="/" className="flex items-center">
+                        <Image
+                            src="/cloudLogo.png"
+                            alt="HudHud Cloud"
+                            width={160}
+                            height={56}
+                            className="object-contain h-14 w-auto brightness-0 invert"
+                        />
                     </Link>
                     <p className="text-white/60 text-base leading-relaxed max-w-xs">
                         Powering your digital business with cloud, domains & secure infrastructure across Africa and beyond.
